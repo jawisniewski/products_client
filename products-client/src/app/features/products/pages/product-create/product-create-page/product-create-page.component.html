@@ -1,0 +1,7 @@
+<div class="article">
+  <h3>{{ "AddProduct" | translate }}</h3>
+  <hr />
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <app-api-alert [errorKey]="errorKey"></app-api-alert>
+  <product-form (submitted)="onSaveProduct($event)"></product-form>
+</div>

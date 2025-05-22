@@ -1,0 +1,68 @@
+@use "variables" as *;
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid $primary-color; // zielony można zamienić na $primary-color
+}
+.ng-invalid:not(form) {
+  border-left: 5px solid $danger-color;
+}
+.alert div {
+  background-color: lighten($danger-color, 40%);
+  color: $danger-color;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+.form-group {
+  margin-bottom: $spacing-lg;
+}
+.product-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: $font-family;
+
+  .product-form-label {
+    display: block;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-md;
+    font-weight: 500;
+    color: #333;
+    font-family: $font-family;
+  }
+  .product-form-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: $spacing-sm;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    font-family: $font-family;
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  .product-submit {
+    display: block;
+    width: 100%;
+    padding: $spacing-lg;
+    background: $primary-color;
+    color: $white-color;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: $spacing-lg;
+    font-family: $font-family;
+    &:disabled {
+      background: $secondary-color;
+      cursor: not-allowed;
+    }
+  }
+}

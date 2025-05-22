@@ -1,0 +1,24 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="product-form">
+  <label class="product-form-label">
+    {{ "Name" | translate }}:
+    <input formControlName="name" type="text" class="product-form-input" />
+    <form-errors [control]="productForm.get('name')"></form-errors>
+  </label>
+
+  <label class="product-form-label">
+    {{ "Code" | translate }}:
+
+    <input formControlName="code" type="text" class="product-form-input" />
+    <form-errors [control]="productForm.get('code')"></form-errors>
+  </label>
+
+  <label class="product-form-label">
+    {{ "Price" | translate }}:
+    <input formControlName="price" type="number" class="product-form-input" />
+    <form-errors [control]="productForm.get('price')"></form-errors>
+  </label>
+
+  <button type="submit" [disabled]="productForm.invalid" class="product-submit">
+    {{ "Save" | translate }}
+  </button>
+</form>

@@ -1,0 +1,10 @@
+<div class="article">
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <app-api-alert [errorKey]="errorKey"></app-api-alert>
+  <product-list
+    [products]="products"
+    (pageChanged)="onPageChange($event)"
+    [paginationParams]="paginationParams"
+    [total]="total"
+  ></product-list>
+</div>

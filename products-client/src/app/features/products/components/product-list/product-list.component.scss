@@ -1,0 +1,19 @@
+@use "@angular/material" as mat;
+@use "variables" as *;
+.product-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+.product-list-container {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  td,
+  th {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+  }
+}

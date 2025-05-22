@@ -1,0 +1,14 @@
+@use "variables" as *;
+@use "@angular/material" as mat;
+
+.error-control {
+  color: $danger-color;
+  background: lighten($danger-color, 40%);
+  border-left: 4px solid $danger-color;
+  padding: $spacing-md $spacing-lg;
+  margin-top: $spacing-sm;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: $font-family;
+}
