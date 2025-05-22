@@ -1,0 +1,11 @@
+<div *ngIf="control && control.touched && control.errors">
+  <div *ngIf="control.errors['required']">
+    {{ "requiredError" | translate }}
+  </div>
+  <div *ngIf="control.errors['minlength']">
+    {{ "minLenghtError" | translate }}
+  </div>
+  <div *ngIf="control.errors['min']">
+    {{ "minValueError" | translate }}
+  </div>
+</div>

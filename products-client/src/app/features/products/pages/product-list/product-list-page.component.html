@@ -4,3 +4,10 @@
   [paginationParams]="paginationParams"
   [total]="total"
 ></product-list>
+<div *ngIf="isLoading" class="loader">
+  <!-- np. spinner CSS albo "Ładowanie..." -->
+  Ładowanie...
+</div>
+<div *ngIf="errorKey" class="error">
+  {{ `ApiErrors.${errorKey}` | translate }}
+</div>

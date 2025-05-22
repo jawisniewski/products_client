@@ -1,18 +1,24 @@
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <label>
-    Name:
+    {{ "Name" | translate }}:
     <input formControlName="name" />
+    <form-errors [control]="productForm.get('name')"></form-errors>
   </label>
 
   <label>
-    Code:
+    {{ "Code" | translate }}:
+
     <input formControlName="code" />
+    <form-errors [control]="productForm.get('code')"></form-errors>
   </label>
 
   <label>
-    Price:
+    {{ "Price" | translate }}:
     <input formControlName="price" type="number" />
+    <form-errors [control]="productForm.get('price')"></form-errors>
   </label>
 
-  <button type="submit" [disabled]="productForm.invalid">Save</button>
+  <button type="submit" [disabled]="productForm.invalid">
+    {{ "Save" | translate }}
+  </button>
 </form>

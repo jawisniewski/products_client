@@ -1,2 +1,8 @@
-<p>product-create-page works!</p>
 <product-form (submitted)="onSaveProduct($event)"></product-form>
+<div *ngIf="isLoading" class="loader">
+  <!-- np. spinner CSS albo "Ładowanie..." -->
+  Ładowanie...
+</div>
+<div *ngIf="errorKey" class="error">
+  {{ `ApiErrors.${errorKey}` | translate }}
+</div>

@@ -9,21 +9,24 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductListPageComponent,
     ProductCreatePageComponent,
+    ProductFormComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     ProductsRoutingModule,
-    ProductFormComponent,
+    ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
     TranslateModule,
+    SharedModule,
   ],
 })
 export class ProductsModule {}

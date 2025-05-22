@@ -12,6 +12,8 @@ import {
 } from '@ngx-translate/core';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { CustomMatPaginatorIntl } from './shared/custom-pagination/custom-Mat-paginator-intl';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
 }
@@ -20,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
+    { provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl },
     provideTranslateService({
       defaultLanguage: 'pl',
       loader: {

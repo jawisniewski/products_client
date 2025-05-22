@@ -1,1 +1,25 @@
-{ "Code": "Kod", "Name": "Nazwa", "Price": "Cena" }
+{
+  "Code": "Kod",
+  "Name": "Nazwa",
+  "Price": "Cena",
+  "Save": "Zapisz",
+  "requiredError": "Pole wymagane",
+  "minLenghtError": "Minimalna długość to 3 znaków",
+  "minValueError": "Minimalna wartość to 0.01",
+  "productList": "Lista produktów",
+  "Products": "Produkty",
+  "AddProduct": "Dodaj produkt",
+  "PAGINATOR": {
+    "ITEMS_PER_PAGE": "Elementów na stronę",
+    "NEXT_PAGE": "Następna strona",
+    "PREVIOUS_PAGE": "Poprzednia strona",
+    "RANGE_LABEL": "{{startIndex}} - {{endIndex}} z {{length}}"
+  },
+  "Title": "Produkty",
+  "ApiErrors": {
+    "NO_CONNECTION": "Brak połączenia z serwerem, proszę spróbować później",
+    "PRODUCT_CODE_ALREADY_EXISTS": "Kod produktu już istnieje",
+    "CREATING_ERROR": "Błąd tworzenia produktu",
+    "GET_ERROR": "Błąd pobierania produktów"
+  }
+}
