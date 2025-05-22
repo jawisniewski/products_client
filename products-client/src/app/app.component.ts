@@ -5,7 +5,7 @@ import { CoreModule } from './core/core.module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslateModule, CoreModule, RouterLink],
+  imports: [RouterOutlet, TranslateModule, CoreModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

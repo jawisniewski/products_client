@@ -10,6 +10,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../shared/shared.module';
+import { MatSortModule } from '@angular/material/sort';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,11 @@ import { SharedModule } from '../../shared/shared.module';
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
+    MatListModule,
     TranslateModule,
     SharedModule,
+    MatButtonModule,
   ],
 })
 export class ProductsModule {}

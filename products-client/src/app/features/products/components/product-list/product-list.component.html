@@ -1,8 +1,14 @@
-<div>{{ "productList" | translate }}:</div>
+<div class="product-list-header">
+  <h3>{{ "productList" | translate }}:</h3>
 
+  <div class="button-row">
+    <a mat-flat-button href="/products/new" target="_blank">{{
+      "AddProduct" | translate
+    }}</a>
+  </div>
+</div>
 <div class="product-list-container">
   <table mat-table [dataSource]="products" class="mat-elevation-z8">
-    <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>{{ "Name" | translate }}</th>
       <td mat-cell *matCellDef="let product">

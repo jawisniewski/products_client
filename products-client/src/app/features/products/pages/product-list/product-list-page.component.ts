@@ -19,6 +19,7 @@ export class ProductListPageComponent {
   total: number = 0;
   isLoading = false;
   errorKey: string | null = '';
+
   constructor(private productService: ProductService) {}
   ngOnInit() {
     this.getProducts();

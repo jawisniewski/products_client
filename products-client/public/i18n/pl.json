@@ -3,9 +3,11 @@
   "Name": "Nazwa",
   "Price": "Cena",
   "Save": "Zapisz",
-  "requiredError": "Pole wymagane",
-  "minLenghtError": "Minimalna długość to 3 znaków",
-  "minValueError": "Minimalna wartość to 0.01",
+  "REQUIRED_ERROR": "Pole wymagane",
+  "MIN_LENGHT_ERROR": "Minimalna długość to 3 znaków",
+  "MAX_LENGHT_ERROR": "Maksymalna długość to 200 znaków",
+  "MIN_VALUE_ERROR": "Minimalna wartość to 0.01",
+  "MAX_VALUE_ERROR:": "Przekroczono maksymalną wartość",
   "productList": "Lista produktów",
   "Products": "Produkty",
   "AddProduct": "Dodaj produkt",
@@ -15,11 +17,18 @@
     "PREVIOUS_PAGE": "Poprzednia strona",
     "RANGE_LABEL": "{{startIndex}} - {{endIndex}} z {{length}}"
   },
-  "Title": "Produkty",
+  "Title": "Produkty demo",
   "ApiErrors": {
     "NO_CONNECTION": "Brak połączenia z serwerem, proszę spróbować później",
     "PRODUCT_CODE_ALREADY_EXISTS": "Kod produktu już istnieje",
     "CREATING_ERROR": "Błąd tworzenia produktu",
-    "GET_ERROR": "Błąd pobierania produktów"
+    "GET_ERROR": "Błąd pobierania produktów",
+    "PRICE_COMMA_ERROR": "Cena może mieć makysymalnie 2 miejsca po przecinku",
+    "PRICE_ERROR": "Cena musi być liczbą dodatnią",
+    "CODE_EMPTY": "Kod produktu nie może być pusty",
+    "CODE_ERROR": "Kod produktu musi mieć długość od 3 do 200 znaków",
+    "NAME_EMPTY": "Nazwa produktu nie może być pusta",
+    "NAME_ERROR": "Nazwa produktu musi mieć długość od 3 do 200 znaków",
+    "UNKNOWN_ERROR": "Wystąpił błąd podczas tworzenia produktu, proszę spróbować później"
   }
 }

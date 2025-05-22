@@ -1,13 +1,10 @@
-<product-list
-  [products]="products"
-  (pageChanged)="onPageChange($event)"
-  [paginationParams]="paginationParams"
-  [total]="total"
-></product-list>
-<div *ngIf="isLoading" class="loader">
-  <!-- np. spinner CSS albo "Ładowanie..." -->
-  Ładowanie...
-</div>
-<div *ngIf="errorKey" class="error">
-  {{ `ApiErrors.${errorKey}` | translate }}
+<div class="article">
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <app-api-alert [errorKey]="errorKey"></app-api-alert>
+  <product-list
+    [products]="products"
+    (pageChanged)="onPageChange($event)"
+    [paginationParams]="paginationParams"
+    [total]="total"
+  ></product-list>
 </div>

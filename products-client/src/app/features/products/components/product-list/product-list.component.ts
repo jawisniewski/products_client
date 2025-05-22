@@ -19,9 +19,10 @@ export class ProductListComponent {
   @Input() paginationParams!: PaginationParams;
   @Input() total!: number;
   @Output() pageChanged = new EventEmitter<PaginationParams>();
-  displayedColumns: string[] = ['name', 'code', 'price'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  constructor() {}
+
+  displayedColumns: string[] = ['name', 'code', 'price'];
+
   trackbyFn(index: number, product: Product): number {
     return index;
   }

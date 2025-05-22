@@ -13,9 +13,26 @@ export class ProductFormComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.productForm = this.formBuilder.group({
-      code: ['', [Validators.required, Validators.minLength(3)]],
-      name: ['', [Validators.required, Validators.minLength(3)]],
-      price: [0.01, [Validators.required, Validators.min(0.01)]],
+      code: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(200),
+        ],
+      ],
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(200),
+        ],
+      ],
+      price: [
+        0.01,
+        [Validators.required, Validators.min(0.01), Validators.max(999999)],
+      ],
     });
   }
   onSubmit() {

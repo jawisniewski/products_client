@@ -29,8 +29,10 @@ export class ProductCreatePageComponent {
           this.isLoading = false;
           if (err.status === 0) {
             this.errorKey = 'NO_CONNECTION';
-          } else if (err.error) {
-            this.errorKey = err.error;
+          } else if (err.errorCode) {
+            this.errorKey = err.errorCode;
+          } else {
+            this.errorKey = 'UNKNOWN_ERROR';
           }
           return of(null);
         })
