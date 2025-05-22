@@ -2,22 +2,18 @@
 
 <div class="product-list-container">
   <table mat-table [dataSource]="products" class="mat-elevation-z8">
-    <product-item
-      *ngFor="let product of products; trackBy: trackbyFn"
-      [product]="product"
-    ></product-item>
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <th mat-header-cell *matHeaderCellDef>{{ "Name" | translate }}</th>
       <td mat-cell *matCellDef="let product">
         {{ product.name }}
       </td> </ng-container
     ><ng-container matColumnDef="code">
-      <th mat-header-cell *matHeaderCellDef>Code</th>
+      <th mat-header-cell *matHeaderCellDef>{{ "Code" | translate }}</th>
       <td mat-cell *matCellDef="let product">{{ product.code }}</td>
     </ng-container>
     ><ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef>Price</th>
+      <th mat-header-cell *matHeaderCellDef>{{ "Price" | translate }}</th>
       <td mat-cell *matCellDef="let product">{{ product.price }}</td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
