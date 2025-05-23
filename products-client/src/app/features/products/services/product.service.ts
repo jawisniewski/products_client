@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product.model';
 import { ProductsResponse } from '../models/products-response.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://localhost:7235/products';
+  private apiUrl = `${environment.apiUrl}/products`;
 
   constructor(private httpClient: HttpClient) {}
 
