@@ -8,11 +8,30 @@ import {
 import { Product } from '../../models/product.model';
 import { MatPaginator } from '@angular/material/paginator';
 import { PaginationParams } from '../../models/pagination-params.model';
+import { MatAnchor } from '@angular/material/button';
+import { MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow } from '@angular/material/table';
+import { CurrencyPipe } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  selector: 'product-list',
-  standalone: false,
-  templateUrl: 'product-list.component.html',
-  styleUrls: ['product-list.component.scss'],
+    selector: 'product-list',
+    templateUrl: 'product-list.component.html',
+    styleUrls: ['product-list.component.scss'],
+    imports: [
+        MatAnchor,
+        MatTable,
+        MatColumnDef,
+        MatHeaderCellDef,
+        MatHeaderCell,
+        MatCellDef,
+        MatCell,
+        MatHeaderRowDef,
+        MatHeaderRow,
+        MatRowDef,
+        MatRow,
+        MatPaginator,
+        CurrencyPipe,
+        TranslatePipe,
+    ],
 })
 export class ProductListComponent {
   @Input() products!: Product[];

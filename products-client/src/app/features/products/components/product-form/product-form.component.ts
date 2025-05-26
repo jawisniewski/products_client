@@ -1,11 +1,17 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormErrorsComponent } from '../../../../shared/components/form-errors/form-errors.component';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  selector: 'product-form',
-  standalone: false,
-  templateUrl: './product-form.component.html',
-  styleUrl: './product-form.component.scss',
+    selector: 'product-form',
+    templateUrl: './product-form.component.html',
+    styleUrl: './product-form.component.scss',
+    imports: [
+        ReactiveFormsModule,
+        FormErrorsComponent,
+        TranslatePipe,
+    ],
 })
 export class ProductFormComponent {
   @Output() submitted = new EventEmitter<Product>();

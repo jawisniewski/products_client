@@ -3,11 +3,18 @@ import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 import { PaginationParams } from '../../models/pagination-params.model';
 import { catchError, of } from 'rxjs';
+import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
+import { ApiAlertComponent } from '../../../../shared/components/api-alert/api-alert.component';
+import { ProductListComponent } from '../../components/product-list/product-list.component';
 @Component({
-  selector: 'products',
-  standalone: false,
-  templateUrl: 'product-list-page.component.html',
-  styleUrls: ['product-list-page.component.scss'],
+    selector: 'products',
+    templateUrl: 'product-list-page.component.html',
+    styleUrls: ['product-list-page.component.scss'],
+    imports: [
+        LoaderComponent,
+        ApiAlertComponent,
+        ProductListComponent,
+    ],
 })
 export class ProductListPageComponent {
   title = 'products-client';

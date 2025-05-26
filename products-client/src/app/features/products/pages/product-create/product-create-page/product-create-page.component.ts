@@ -3,12 +3,21 @@ import { ProductService } from '../../../services/product.service';
 import { Router } from '@angular/router';
 import { Product } from '../../../models/product.model';
 import { catchError, of } from 'rxjs';
+import { LoaderComponent } from '../../../../../shared/components/loader/loader.component';
+import { ApiAlertComponent } from '../../../../../shared/components/api-alert/api-alert.component';
+import { ProductFormComponent } from '../../../components/product-form/product-form.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  standalone: false,
-  selector: 'product-create-page',
-  templateUrl: './product-create-page.component.html',
-  styleUrl: './product-create-page.component.scss',
+    selector: 'product-create-page',
+    templateUrl: './product-create-page.component.html',
+    styleUrl: './product-create-page.component.scss',
+    imports: [
+        LoaderComponent,
+        ApiAlertComponent,
+        ProductFormComponent,
+        TranslatePipe,
+    ],
 })
 export class ProductCreatePageComponent {
   constructor(private productService: ProductService, private router: Router) {}
