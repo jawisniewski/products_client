@@ -1,3 +1,5 @@
-<div *ngIf="errorKey" class="api-alert">
+@if (errorKey) {
+<div class="api-alert">
   {{ `ApiErrors.${errorKey}` | translate }}
 </div>
+}
