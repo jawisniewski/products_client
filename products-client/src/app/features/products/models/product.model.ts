@@ -1,5 +1,5 @@
-export interface Product {
-    name:string;
-    code:string;
-    price:number;
+export interface ProductModel {
+  name: string;
+  code: string;
+  price: number;
 }

@@ -9,19 +9,13 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
-import { SharedModule } from '../../shared/shared.module';
+
 import { MatSortModule } from '@angular/material/sort';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    ProductListComponent,
-    ProductListPageComponent,
-    ProductCreatePageComponent,
-    ProductFormComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     ReactiveFormsModule,
     ProductsRoutingModule,
@@ -31,8 +25,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatSortModule,
     MatListModule,
     TranslateModule,
-    SharedModule,
     MatButtonModule,
-  ],
+    ProductListComponent,
+    ProductListPageComponent,
+    ProductCreatePageComponent,
+    ProductFormComponent,
+],
 })
 export class ProductsModule {}

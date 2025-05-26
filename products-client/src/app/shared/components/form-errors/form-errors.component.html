@@ -1,17 +1,7 @@
-<div *ngIf="control && control.touched && control.errors">
-  <div *ngIf="control.errors['required']" class="error-control">
-    {{ "REQUIRED_ERROR" | translate }}
-  </div>
-  <div *ngIf="control.errors['minlength']" class="error-control">
-    {{ "MIN_LENGHT_ERROR" | translate }}
-  </div>
-  <div *ngIf="control.errors['maxlength']" class="error-control">
-    {{ "MAX_LENGHT_ERROR" | translate }}
-  </div>
-  <div *ngIf="control.errors['min']" class="error-control">
-    {{ "MIN_VALUE_ERROR" | translate }}
-  </div>
-  <div *ngIf="control.errors['max']" class="error-control">
-    {{ "MAX_VALUE_ERROR" | translate }}
-  </div>
+@if (control && control.touched && control.errors) {
+<div class="error-control">
+  @for (key of errorKeys; track key) { @if (errorMessages[key]) {
+  <span>{{ errorMessages[key].translation | translate }}</span>
+  } }
 </div>
+}
