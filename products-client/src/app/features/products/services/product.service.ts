@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product.model';
+import { ProductModel } from '../models/product.model';
 import { ProductsResponse } from '../models/products-response.model';
 import { environment } from '../../../../environments/environment';
 
@@ -25,7 +25,7 @@ export class ProductService {
     });
   }
 
-  createProduct(product: Product): Observable<Product> {
-    return this.httpClient.post<Product>(`${this.apiUrl}/Create`, product);
+  createProduct(product: ProductModel): Observable<ProductModel> {
+    return this.httpClient.post<ProductModel>(`${this.apiUrl}/Create`, product);
   }
 }

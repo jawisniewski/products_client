@@ -1,5 +1,5 @@
-import { Component, input, ViewChild } from '@angular/core';
-import { Product } from '../../models/product.model';
+import { Component, input, OnInit, ViewChild } from '@angular/core';
+import { ProductModel } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 import { PaginationParams } from '../../models/pagination-params.model';
 import { catchError, of } from 'rxjs';
@@ -7,18 +7,14 @@ import { LoaderComponent } from '../../../../shared/components/loader/loader.com
 import { ApiAlertComponent } from '../../../../shared/components/api-alert/api-alert.component';
 import { ProductListComponent } from '../../components/product-list/product-list.component';
 @Component({
-    selector: 'products',
-    templateUrl: 'product-list-page.component.html',
-    styleUrls: ['product-list-page.component.scss'],
-    imports: [
-        LoaderComponent,
-        ApiAlertComponent,
-        ProductListComponent,
-    ],
+  selector: 'products',
+  templateUrl: 'product-list-page.component.html',
+  styleUrls: ['product-list-page.component.scss'],
+  imports: [LoaderComponent, ApiAlertComponent, ProductListComponent],
 })
-export class ProductListPageComponent {
+export class ProductListPageComponent implements OnInit {
   title = 'products-client';
-  products: Product[] = [];
+  products: ProductModel[] = [];
   paginationParams: PaginationParams = {
     pageIndex: 0,
     pageSize: 10,
